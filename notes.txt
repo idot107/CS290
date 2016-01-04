@@ -1,0 +1,2 @@
+I needed to add a second file, so i am just making a simple text file.
+This will probably be terminated and replaced with a text file containing notes for assignments or projects.
