@@ -15,7 +15,7 @@ app.get('/',function(req,res){
   res.render('home');
 });
 
-app.get('/get',function(req,res){
+app.get('/',function(req,res){
   var qParams = [];
   for (var p in req.query){
     qParams.push({'name':p,'value':req.query[p]})
@@ -25,7 +25,7 @@ app.get('/get',function(req,res){
   res.render('get', context);
 });
 
-app.post('/post', function(req,res){
+app.post('/', function(req,res){
   var qParams = [];
   for (var p in req.body){
     qParams.push({'name':p,'value':req.body[p]})
