@@ -40,7 +40,7 @@ app.get('/get-loopback-improved',function(req,res){
   }
   var context = {};
   context.dataList = qParams;
-  res.render('get', context);
+  res.render('get-loopback-improved', context);
 });
 
 app.post('/post-loopback', function(req,res){
@@ -52,7 +52,7 @@ app.post('/post-loopback', function(req,res){
   console.log(req.body);
   var context = {};
   context.dataList = qParams;
-  res.render('post', context);
+  res.render('post-loopback', context);
 });
 
 app.use(function(req,res){
