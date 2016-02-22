@@ -15,16 +15,6 @@ app.get('/',function(req,res){
   res.render('home');
 });
 
-app.get('/get-loopback-improved',function(req,res){
-  var qParams = [];
-  for (var p in req.query){
-    qParams.push({'name':p,'value':req.query[p]})
-  }
-  var context = {};
-  context.dataList = qParams;
-  res.render('get-loopback-improved', context);
-});
-
 app.post('/post-loopback', function(req,res){
   var qParams = [];
   for (var p in req.body){
@@ -36,6 +26,17 @@ app.post('/post-loopback', function(req,res){
   context.dataList = qParams;
   res.render('post-loopback', context);
 });
+
+app.get('/get-loopback-improved',function(req,res){
+  var qParams = [];
+  for (var p in req.query){
+    qParams.push({'name':p,'value':req.query[p]})
+  }
+  var context = {};
+  context.dataList = qParams;
+  res.render('get-loopback-improved', context);
+});
+
 
 app.use(function(req,res){
   res.status(404);
