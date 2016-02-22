@@ -20,7 +20,7 @@ app.post('/post', function(req,res){
   console.log(req.body);
   var context = {};
   context.dataList = qParams;
-  res.send('post-loopback', context);
+  res.render('post-loopback', context);
 });
 
 app.get('/get',function(req,res){
