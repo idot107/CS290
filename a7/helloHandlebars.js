@@ -22,7 +22,7 @@ app.get('/get',function(req,res){
   }
   var context = {};
   context.dataList = qParams;
-  res.render('get-loopback-improved', context);
+  res.render('get', context);
 });
 
 app.post('/post', function(req,res){
@@ -34,7 +34,7 @@ app.post('/post', function(req,res){
   console.log(req.body);
   var context = {};
   context.dataList = qParams;
-  res.render('post-loopback', context);
+  res.render('post', context);
 });
 
 app.use(function(req,res){
