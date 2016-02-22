@@ -11,11 +11,7 @@ app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.set('port', 3000);
 
-app.get('/',function(req,res){
-  res.render('home');
-});
-
-app.post('/post-loopback', function(req,res){
+app.post('/post', function(req,res){
   var qParams = [];
   for (var p in req.body){
     qParams.push({'name':p,'value':req.body[p]})
@@ -24,10 +20,10 @@ app.post('/post-loopback', function(req,res){
   console.log(req.body);
   var context = {};
   context.dataList = qParams;
-  res.render('post-loopback', context);
+  res.send('post-loopback', context);
 });
 
-app.get('/get-loopback-improved',function(req,res){
+app.get('/get',function(req,res){
   var qParams = [];
   for (var p in req.query){
     qParams.push({'name':p,'value':req.query[p]})
