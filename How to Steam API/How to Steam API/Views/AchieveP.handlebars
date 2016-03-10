@@ -1,0 +1,40 @@
+<header>
+<a href="index.html">Home</a>
+<a href="apiKey.html">API Key</a>
+<a href="GetNews.html">App News</a>
+<a href="AchievePP.html">Player Achievements</a>
+<a href="AchieveP.html">Global Achievement %</a>
+<a href="friends.html">Friends List</a> </header>
+<h1>How valuable or rare is each achievement?</h1>
+<p>The steam API allows us to see the global percentage of achievements, well achieved.</p>
+<p>To begin lets look at the arguements that have to be passed in:</p>
+<h2>Inputs</h2>
+<ul>
+<li>gameid--The id of the game</li>
+<li>format--format(JSON,XML,VDF)</li>
+</ul>
+<p>This takes only two inputs but has a whole lot of outputs so be ready!</p>
+<h2>The Call</h2>
+<span><p>http://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=15620&format=VDF<p></span>
+<p>The output looks something like this!</p>
+<img src="achieve1.png" alt="sample output">
+<p>Just as a heads up this is VDF format! You may notice that there is a number before each achievement information! This isn't in either XML or JSON forms and may be of use if you want to count up all the achievements without a program to parse and then determine.</p>
+<p>There are two outputs per achievement:</p>
+<ol>
+<li>name--the descriptive name of the achievement(not what is displayed on steams UI)</li>
+<li>percentage--number already in %, the result is from the formula (#owns game/#has achievement)x100</li>
+</ol> 
+<p>The list ends up being very long, since most games have upwards of 40 to 200 achievements. All of which dont use steams achievement names, making it very inconvienent for use. Luckily this can be used in combination with GetPlayerAchievements which we learned in the previous page how to use.</p> 
+<br>
+<div>
+<a href="52.36.83.76:3000/AchievePP" class="button">(--Prev</a>
+<a href="friends.html" class="button">Next--></a>
+</div>
+<footer>
+<a href="index.html">Home</a>
+<a href="apiKey.html">API Key</a>
+<a href="GetNews.html">App News</a>
+<a href="AchievePP.html">Player Achievements</a>
+<a href="AchieveP.html">Global Achievement %</a>
+<a href="friends.html">Friends List</a> </footer>
+

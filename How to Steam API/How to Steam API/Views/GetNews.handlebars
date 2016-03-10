@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Get News For App</title>
+</head>
+<body>
+<header>
+<a href="index.html">Home</a>
+<a href="apiKey.html">API Key</a>
+<a href="GetNews.html">App News</a>
+<a href="AchievePP.html">Player Achievements</a>
+<a href="AchieveP.html">Global Achievement %</a>
+<a href="friends.html">Friends List</a> </header>
+<h1>Get News for App Call</h1>
+<p>The GetNewsForApp call is used for getting news articles posted about or for a game. The call returns information on the article in the format desired.</p>
+<p>This Call requires four arguements and results in the appid and the newsitems(array of news info)</p>
+<p>To start lets look at the four arguements needed to make the call.</p>
+<h2>Inputs</h2>
+<ul>
+<li><b>appid</b>- The ID of the game</li>
+<li><b>count</b>- Amounts of Articles to be displayed</li>
+<li><b>maxlength</b>-How much of the article you want to read before it ...(usually 300ish)</li>
+<li><b>format</b>- what format you want it displayed in (JSON,XML,VDF)</li>
+</ul>
+<br>
+<h2>The Call</h2>
+<p>So now lets make the call!</p>
+<span><p>http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=230410&count=3&maxlength=300&format=json
+</p>
+</span>
+<p>This uses values appid=230410(warframe),count=3(articles,maxlength=300(characters),format=json</p>
+<p>In the image below we can see a sample of how this looks with these parameters.</p>
+<img src="Getnews1.png">
+<p>The Output from this shows many objects inside the displayed array. Each object has a meaning to it. Here is a decription for each of the objects</p>
+<ul>
+<li><b>appid</b>--displays the game id</li>
+<li><b>gid</b>-- displays the post id</li>
+<li><b>title</b> -- displays the article title</li>
+<li><b>url</b>-- link to article page</li>
+<li><b>is_external_url</b>-- says if the url is an external page(good to check in case we don't want to trust page)</li>
+<li><b>Author</b>--Author of the article</li>
+<li><b>contents</b>--The Article context limited by maxlength</li>
+<li><b>feedlable</b>-- Name of where the article comes from, i.e. website, announcements, update,etc.</li>
+<li><b>Date</b>--Date published, displayed in unix time so make sure to convert</li>
+<li><b>Feedname</b>--Feedname is a more parserable(readable/computer friendly) feedlable, it allows us to parse it and get all the updates, everything from pc gamer, announcements, etc.</li>
+</ul>
+<p>To recap the call needs 4 inputs: appid, count, maxlength, and format. Don't Forget to also put the v0002 after GetNewsForApp/ its part of the call and can trip you up.
+</p>
+<br>
+<div>
+<a href="apiKey.html" class="button">(--Prev</a>
+<a href="AchievePP.html" class="button">Next--></a>
+</div>
+<footer>
+<a href="index.html">Home</a>
+<a href="apiKey.html">API Key</a>
+<a href="GetNews.html">App News</a>
+<a href="AchievePP.html">Player Achievements</a>
+<a href="AchieveP.html">Global Achievement %</a>
+<a href="friends.html">Friends List</a> </footer>
+</body>
+</html>

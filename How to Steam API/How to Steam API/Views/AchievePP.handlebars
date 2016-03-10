@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Player Achievements</title>
+</head>
+<body>
+<header>
+<a href="index.html">Home</a>
+<a href="apiKey.html">API Key</a>
+<a href="GetNews.html">App News</a>
+<a href="AchievePP.html">Player Achievements</a>
+<a href="AchieveP.html">Global Achievement %</a>
+<a href="friends.html">Friends List</a> </header>
+<h1>What are those??</h1>
+<p>Some achievements are hard, some are easy, but first you will want to know what they are!</p>
+<p>The GetPlayerAchievements call uses three arguements to give you details about a games achievements and player completion.</p>
+<h2>Inputs</h2>
+<ul>
+<li>appid--The id of the game you want to look at</li>
+<li>key-- your api key that you got on the api key page</li>
+<li>steamid=the id of your steam id or a players steam id.</li>
+</ul>
+<h2>The Call</h2>
+<span><p>http://http://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/?appid=48700&key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&steamid=76561197972495328</p></span>
+<p>The key has to be your own api key(or someone elses, but i cant endorse stealing) This will give you an output looking something like this:</p>
+<img src="Achieve2.png">
+<p>The data listed has four outputs:</p>
+<ul>
+<li>steamID-- the user id that is accessing</li>
+<li>gameName--The Game name... Simply states the game</li>
+<li>apiname--the name of the achievement in steams naming system</li>
+<li>achieved--1= achieved 0=not achieved</li>
+</ul>
+<p>There seems to be missing data on some games so you may want to be careful with how you set up your parsing and make sure it has a no information option.</p>
+<br>
+<div>
+<a href="GetNews.html" class="button">(--Prev</a>
+<a href="AchieveP.html" class="button">Next--></a>
+</div>
+<footer>
+<a href="index.html">Home</a>
+<a href="apiKey.html">API Key</a>
+<a href="GetNews.html">App News</a>
+<a href="AchievePP.html">Player Achievements</a>
+<a href="AchieveP.html">Global Achievement %</a>
+<a href="friends.html">Friends List</a> </footer>
+</body>
+</html>

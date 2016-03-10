@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Player Friends</title>
+</head>
+<body>
+<header>
+<a href="index.html">Home</a>
+<a href="apiKey.html">API Key</a>
+<a href="GetNews.html">App News</a>
+<a href="AchievePP.html">Player Achievements</a>
+<a href="AchieveP.html">Global Achievement %</a>
+<a href="friends.html">Friends List</a> </header>
+<h1>Lets Find Some Friends</h1>
+
+<p>The GetFriendList call gives us the friend list of any steam user. The user has to have a public visiblity, but anyone who does you can see all of their friends!!</p>
+<p>This is very useful if you want to set up something that finds who has been a players longest friend, or how many friends they have. It can also be combined with the get player stats(which isnt covered in this guide) to see if they have skilled friends or casual friends.</p>
+<p>So lets begin how to use this call!</p>
+<h2>Inputs</h2>
+<ul>
+<li>key-- Your API key you got on the API key page</li>
+<li>steamid-- the id of the user you are looking up</li>
+<li>relationship-- this is a filter so options are <b>all</b> or <b>friends</b> if you are looking for their friends just put friends</li>
+<li>format--Choose the format (JSON,XML,VPM) in this case JSON and VPM are the same</li>
+</ul>
+<h2>The Call</h2>
+<span><p>http://http://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/?key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&steamid=76561197972495328&relationship=friend&format=JSON</p></span>
+<p>The key has to be your own api key(or someone elses, but i cant endorse stealing) This will give you an output looking something like this:</p>
+<img src="friend1.png">
+<p>The data listed has Three outputs:</p>
+<ul>
+<li>steamid-- the user id that is accessing</li>
+<li>relationship--shows who they are on filter if you put friend only will be friend</li>
+<li>friend_since--Gives the time(unix) when users became friends</li>
+</ul>
+<p>This can be a fun call to work with since it can find who is friends with who and if you set it up right you can find data on each of a players friends and use that to see how they compare with their friends.</p>
+<br>
+<div>
+<a href="AchieveP" class="button">(--Prev</a>
+<a href="index.html" class="button">Home--></a>
+</div>
+<footer>
+<a href="index.html">Home</a>
+<a href="apiKey.html">API Key</a>
+<a href="GetNews.html">App News</a>
+<a href="AchievePP.html">Player Achievements</a>
+<a href="AchieveP.html">Global Achievement %</a>
+<a href="friends.html">Friends List</a> </footer>
+</body>
+</html>
